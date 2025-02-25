@@ -12,5 +12,44 @@ Found 3 items
 -rw-r--r--   1 sandeepsunny staff       6148 2025-02-25 14:24 file:///Users/sandeepsunny/Hd/.DS_Store
 -rw-r--r--   1 sandeepsunny staff         32 2025-02-25 14:42 file:///Users/sandeepsunny/Hd/san.txt
 -rw-r--r--   1 sandeepsunny staff         32 2025-02-25 14:24 file:///Users/sandeepsunny/Hd/sunny.txt
-
 sandeepsunny@sandeeps-MacBook-Air ~ % 
+sandeepsunny@sandeeps-MacBook-Air ~ % hdfs dfs -mkdir /mv
+2025-02-25 15:16:04,196 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+sandeepsunny@sandeeps-MacBook-Air ~ % hdfs dfs -mv /lpu /mv
+2025-02-25 15:16:23,030 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+sandeepsunny@sandeeps-MacBook-Air ~ % hdfs dfs -ls /mv
+2025-02-25 15:16:35,708 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 1 items
+drwxr-xr-x   - sandeepsunny supergroup          0 2025-02-25 15:03 /mv/lpu
+sandeepsunny@sandeeps-MacBook-Air ~ % hdfs dfs -ls /mv/lpu
+2025-02-25 15:16:43,300 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 2 items
+-rw-r--r--   1 sandeepsunny supergroup         39 2025-02-25 15:03 /mv/lpu/model.txt
+-rw-r--r--   1 sandeepsunny supergroup         32 2025-02-25 14:29 /mv/lpu/san.txt
+sandeepsunny@sandeeps-MacBook-Air ~ % hdfs dfs -ls /mv/lpu/san.txt
+2025-02-25 15:16:50,253 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+-rw-r--r--   1 sandeepsunny supergroup         32 2025-02-25 14:29 /mv/lpu/san.txt
+sandeepsunny@sandeeps-MacBook-Air ~ % hdfs dfs -cat /mv/lpu/san.txt
+2025-02-25 15:17:00,870 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Hello Pam sunny learning hadoop
+sandeepsunny@sandeeps-MacBook-Air ~ % hdfs dfs -ls /               
+2025-02-25 15:18:36,872 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 2 items
+drwxr-xr-x   - sandeepsunny supergroup          0 2025-02-25 15:14 /cp
+drwxr-xr-x   - sandeepsunny supergroup          0 2025-02-25 15:16 /mv
+sandeepsunny@sandeeps-MacBook-Air ~ % hdfs dfs -mkdir /del         
+2025-02-25 15:22:20,265 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+sandeepsunny@sandeeps-MacBook-Air ~ % hdfs dfs -ls /
+2025-02-25 15:22:31,859 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 3 items
+drwxr-xr-x   - sandeepsunny supergroup          0 2025-02-25 15:14 /cp
+drwxr-xr-x   - sandeepsunny supergroup          0 2025-02-25 15:22 /del
+drwxr-xr-x   - sandeepsunny supergroup          0 2025-02-25 15:16 /mv
+sandeepsunny@sandeeps-MacBook-Air ~ % hdfs dfs -rmdir /del
+2025-02-25 15:22:44,093 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+sandeepsunny@sandeeps-MacBook-Air ~ % hdfs dfs -ls /
+2025-02-25 15:22:53,007 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 2 items
+drwxr-xr-x   - sandeepsunny supergroup          0 2025-02-25 15:14 /cp
+drwxr-xr-x   - sandeepsunny supergroup          0 2025-02-25 15:16 /mv
+
