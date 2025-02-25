@@ -1,0 +1,16 @@
+sandeepsunny@sandeeps-MacBook-Air ~ % hdfs dfs -cat /lpu/san.txt
+2025-02-25 14:41:14,563 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Hello Pam sunny learning hadoop
+sandeepsunny@sandeeps-MacBook-Air ~ % hdfs dfs -get /lpu/san.txt Users/sandeepsunny/Hd
+2025-02-25 14:42:45,149 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+get: `Users/sandeepsunny/Hd': No such file or directory: `file:/Users/sandeepsunny/Users/sandeepsunny/Hd'
+sandeepsunny@sandeeps-MacBook-Air ~ % hdfs dfs -get /lpu/san.txt /Users/sandeepsunny/Hd
+2025-02-25 14:42:58,697 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+sandeepsunny@sandeeps-MacBook-Air ~ % hdfs dfs -ls file:////Users/sandeepsunny/Hd 
+2025-02-25 14:43:41,228 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 3 items
+-rw-r--r--   1 sandeepsunny staff       6148 2025-02-25 14:24 file:///Users/sandeepsunny/Hd/.DS_Store
+-rw-r--r--   1 sandeepsunny staff         32 2025-02-25 14:42 file:///Users/sandeepsunny/Hd/san.txt
+-rw-r--r--   1 sandeepsunny staff         32 2025-02-25 14:24 file:///Users/sandeepsunny/Hd/sunny.txt
+
+sandeepsunny@sandeeps-MacBook-Air ~ % 
